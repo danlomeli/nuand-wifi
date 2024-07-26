@@ -1,0 +1,6 @@
+[submodule "bladeRF"]
+	path = bladeRF
+	url = https://github.com/Nuand/bladeRF.git
+[submodule "bladeRF-wiphy"]
+	path = bladeRF-wiphy
+	url = https://github.com/Nuand/bladeRF-wiphy.git

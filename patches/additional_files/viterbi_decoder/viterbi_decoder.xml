@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.11.04.14:14:02"
+ outputDirectory="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CEBA9F23C8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="in" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <port name="sink_val" direction="input" role="valid" width="1" />
+   <port name="sink_rdy" direction="output" role="ready" width="1" />
+   <port name="eras_sym" direction="input" role="eras_sym" width="2" />
+   <port name="rr" direction="input" role="rr" width="16" />
+  </interface>
+  <interface name="out" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="rst" />
+   <port name="source_val" direction="output" role="valid" width="1" />
+   <port name="source_rdy" direction="input" role="ready" width="1" />
+   <port
+       name="normalizations"
+       direction="output"
+       role="normalizations"
+       width="8" />
+   <port name="decbit" direction="output" role="decbit" width="1" />
+  </interface>
+  <interface name="rst" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset" direction="input" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="viterbi_decoder:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CEBA9F23C8,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1699132442,AUTO_UNIQUE_ID=(altera_viterbi_ii:22.1:BSF=1,BSFDISPLAY=0,FMAX=80.0,ISBER=0,ISOCTAL=Decimal,L=7,LATINCYC=174.0,LATINS=2.175,NODESYNC=0,TROUGH=80.0,acs_units=1,ber=unused,best_state_finder=unused,bmgwide=13,constraint_length_m_1=6,dec_mode=V,design_env=NATIVE,ga=91,gb=121,gc=0,gd=0,ge=0,gf=0,gg=0,log2_n_max=1,n=2,n_max=2,ncodes=1,node_sync=unused,numerr_size=8,parallel_optimization=Continuous,rr_size=16,sel_code_size=1,selected_device_family=Cyclone V,softbits=8,use_altera_syncram=0,v=42,viterbi_type=Parallel,vlog_wide=6)"
+   instancePathKey="viterbi_decoder"
+   kind="viterbi_decoder"
+   version="1.0"
+   name="viterbi_decoder">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1699132442" />
+  <parameter name="AUTO_DEVICE" value="5CEBA9F23C8" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <generatedFiles>
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/viterbi_decoder.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/vi_interface.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/vi_functions.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_dspip_avalon_str_ctrl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_top.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_add_tre.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_sel.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_ram.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_var_enc.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_trb_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_trb_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_bmp_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_ber_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_top_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_met_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_sur_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_acs_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_top_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_ber_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_bmp_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_top_atl.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_top_atl.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/viterbi_decoder_viterbi_ii_0_ini.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/viterbi_decoder_viterbi_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/daniel/playground/bladeRF/hdl/fpga/ip/nuand/wiphy/fpga/ip/altera/viterbi_decoder/viterbi_decoder.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/tools/intelFPGA_lite/22.1std/ip/altera/dsp/altera_vit_ii/top_hw/altera_viterbi_ii_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="viterbi_decoder">queue size: 0 starting:viterbi_decoder "viterbi_decoder"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="viterbi_decoder"><![CDATA["<b>viterbi_decoder</b>" reuses <b>altera_viterbi_ii</b> "<b>submodules/viterbi_decoder_viterbi_ii_0</b>"]]></message>
+   <message level="Debug" culprit="viterbi_decoder">queue size: 0 starting:altera_viterbi_ii "submodules/viterbi_decoder_viterbi_ii_0"</message>
+   <message level="Info" culprit="viterbi_ii_0"><![CDATA["<b>viterbi_decoder</b>" instantiated <b>altera_viterbi_ii</b> "<b>viterbi_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_viterbi_ii:22.1:BSF=1,BSFDISPLAY=0,FMAX=80.0,ISBER=0,ISOCTAL=Decimal,L=7,LATINCYC=174.0,LATINS=2.175,NODESYNC=0,TROUGH=80.0,acs_units=1,ber=unused,best_state_finder=unused,bmgwide=13,constraint_length_m_1=6,dec_mode=V,design_env=NATIVE,ga=91,gb=121,gc=0,gd=0,ge=0,gf=0,gg=0,log2_n_max=1,n=2,n_max=2,ncodes=1,node_sync=unused,numerr_size=8,parallel_optimization=Continuous,rr_size=16,sel_code_size=1,selected_device_family=Cyclone V,softbits=8,use_altera_syncram=0,v=42,viterbi_type=Parallel,vlog_wide=6"
+   instancePathKey="viterbi_decoder:.:viterbi_ii_0"
+   kind="altera_viterbi_ii"
+   version="22.1"
+   name="viterbi_decoder_viterbi_ii_0">
+  <parameter name="ISOCTAL" value="Decimal" />
+  <parameter name="LATINS" value="2.175" />
+  <parameter name="bmgwide" value="13" />
+  <parameter name="selected_device_family" value="Cyclone V" />
+  <parameter name="L" value="7" />
+  <parameter name="log2_n_max" value="1" />
+  <parameter name="ber" value="unused" />
+  <parameter name="BSFDISPLAY" value="0" />
+  <parameter name="constraint_length_m_1" value="6" />
+  <parameter name="BSF" value="1" />
+  <parameter name="best_state_finder" value="unused" />
+  <parameter name="viterbi_type" value="Parallel" />
+  <parameter name="ga" value="91" />
+  <parameter name="gb" value="121" />
+  <parameter name="gc" value="0" />
+  <parameter name="gd" value="0" />
+  <parameter name="ge" value="0" />
+  <parameter name="FMAX" value="80.0" />
+  <parameter name="gf" value="0" />
+  <parameter name="rr_size" value="16" />
+  <parameter name="gg" value="0" />
+  <parameter name="ncodes" value="1" />
+  <parameter name="LATINCYC" value="174.0" />
+  <parameter name="dec_mode" value="V" />
+  <parameter name="softbits" value="8" />
+  <parameter name="n_max" value="2" />
+  <parameter name="ISBER" value="0" />
+  <parameter name="n" value="2" />
+  <parameter name="acs_units" value="1" />
+  <parameter name="design_env" value="NATIVE" />
+  <parameter name="numerr_size" value="8" />
+  <parameter name="sel_code_size" value="1" />
+  <parameter name="parallel_optimization" value="Continuous" />
+  <parameter name="use_altera_syncram" value="0" />
+  <parameter name="v" value="42" />
+  <parameter name="vlog_wide" value="6" />
+  <parameter name="NODESYNC" value="0" />
+  <parameter name="TROUGH" value="80.0" />
+  <parameter name="node_sync" value="unused" />
+  <generatedFiles>
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/vi_interface.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/vi_functions.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_dspip_avalon_str_ctrl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_top.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_add_tre.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_sel.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_ram.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_var_enc.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_trb_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_trb_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_bmp_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_ber_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_top_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_met_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_sur_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_acs_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_top_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_ber_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_bmp_atl.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_hyb_top_atl.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/auk_vit_par_top_atl.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/src/viterbi_decoder_viterbi_ii_0_ini.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="/home/daniel/playground/bladeRF/fpga/ip/altera/viterbi_decoder/viterbi_decoder/synthesis/submodules/viterbi_decoder_viterbi_ii_0.vhd"
+       type="VHDL"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/tools/intelFPGA_lite/22.1std/ip/altera/dsp/altera_vit_ii/top_hw/altera_viterbi_ii_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="viterbi_decoder" as="viterbi_ii_0" />
+  <messages>
+   <message level="Debug" culprit="viterbi_decoder">queue size: 0 starting:altera_viterbi_ii "submodules/viterbi_decoder_viterbi_ii_0"</message>
+   <message level="Info" culprit="viterbi_ii_0"><![CDATA["<b>viterbi_decoder</b>" instantiated <b>altera_viterbi_ii</b> "<b>viterbi_ii_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>
